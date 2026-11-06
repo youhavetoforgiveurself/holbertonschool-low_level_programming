@@ -21,7 +21,7 @@ int main(void)
 
 		if (choice < 0 || choice > 4)
 			printf("Invalid choice\n");
-		else if (choice == 1)
+		else if (choice == 1 || choice == 2)
 		{
 			printf("A: ");
 			if (scanf("%d", &a) != 1)
@@ -31,7 +31,10 @@ int main(void)
 			if (scanf("%d", &b) != 1)
 				return (1);
 
-			printf("Result: %d\n", a + b);
+			if (choice == 1)
+				printf("Result: %d\n", a + b);
+			else
+				printf("Result: %d\n", a - b);
 		}
 	} while (choice != 0);
 

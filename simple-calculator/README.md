@@ -12,12 +12,11 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 calculator.c -o calculator
 
 ## Operations
 
-The calculator has a menu for +, -, * and /.
+The calculator has +, -, * and /.
 
 ## Numeric Behavior
 
-for now, it just takes whole numbers for the menu. The math part isnt added yet
+the calculator uses whole numbers for now, not decimals
 
 ## Limitations
-
-Nothing fancy yet. It only shows the menu and lets you quit by pressing 0. The calculations dont work yet.
+non numeric inputs arent fully handled. yet.

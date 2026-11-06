@@ -4,7 +4,7 @@
 int main(void)
 {
 	int choice;
-	int a, b;
+	double a, b;
 
 	do
 	{
@@ -21,22 +21,26 @@ int main(void)
 
 		if (choice < 0 || choice > 4)
 			printf("Invalid choice\n");
-		else if (choice >= 1 && choice <= 3)
+		else if (choice >= 1 && choice <= 4)
 		{
 			printf("A: ");
-			if (scanf("%d", &a) != 1)
+			if (scanf("%lf", &a) != 1)
 				return (1);
 
 			printf("B: ");
-			if (scanf("%d", &b) != 1)
+			if (scanf("%lf", &b) != 1)
 				return (1);
 
 			if (choice == 1)
-				printf("Result: %d\n", a + b);
+				printf("Result: %g\n", a + b);
 			else if (choice == 2)
-				printf("Result: %d\n", a - b);
+				printf("Result: %g\n", a - b);
+			else if (choice == 3)
+				printf("Result: %g\n", a * b);
+			else if (b == 0)
+				printf("Error: division by zero\n");
 			else
-				printf("Result: %d\n", a * b);
+				printf("Result: %g\n", a / b);
 		}
 	} while (choice != 0);
 
